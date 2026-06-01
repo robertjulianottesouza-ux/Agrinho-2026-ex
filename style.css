@@ -1,0 +1,162 @@
+/* ==========================================================================
+   Configurações Globais e Imagem de Fundo
+   ========================================================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    /* Aplica a imagem com uma camada branca translúcida para garantir a leitura do texto */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+                     url('https://unsplash.com');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    line-height: 1.6;
+}
+
+/* Container Principal - Centraliza o conteúdo na tela */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Cabeçalho (Header)
+   ========================================================================== */
+header {
+    text-align: center;
+    background-color: rgba(46, 125, 50, 0.95); /* Verde escuro com leve transparência */
+    color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    margin: 10px 0 0 0;
+    font-size: 1.2rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   Seções de Conteúdo (Cards Gerais)
+   ========================================================================== */
+section {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #2e7d32; /* Verde folha */
+    border-bottom: 2px solid #a5d6a7; /* Linha sutil verde clara */
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.6rem;
+}
+
+/* ==========================================================================
+   Grid de Dados Estatísticos
+   ========================================================================== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.stat-card {
+    background-color: #f1f8e9; /* Fundo verde bem claro */
+    border-left: 5px solid #4caf50; /* Barra lateral verde */
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2e7d32;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555555;
+}
+
+/* ==========================================================================
+   Listas de Práticas
+   ========================================================================== */
+ul {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+li {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+strong {
+    color: #1b5e20; /* Verde escuro em destaque */
+}
+
+/* ==========================================================================
+   Rodapé (Footer)
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #555555;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   Responsividade (Telas menores / Celulares)
+   ========================================================================== */
+@media (max-width: 600px) {
+    body {
+        background-attachment: scroll; /* Melhora a performance em celulares antigos */
+    }
+    
+    .container {
+        margin: 20px auto;
+    }
+
+    header {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 20px;
+    }
+    
+    h2 {
+        font-size: 1.35rem;
+    }
+}
